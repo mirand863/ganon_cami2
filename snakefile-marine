@@ -11,12 +11,12 @@ rule preprocessing:
 
 rule ganon_build:
     input: taxdump = config["taxdump"],
-           refseq_folder = config["refseq_folder"]
+           refseq = config["refseq"]
     params: prefix = "results/ganon_build/refseq"
     output: "results/ganon_build/refseq.filter"
     log: "results/ganon_build/refseq.log"
     threads: config["threads"]
-    shell: "ganon build --db-prefix {params.prefix} --input-files $(find {input.refseq_folder}*.genomic.fna.gz -type f)" \
+    shell: "ganon build --db-prefix {params.prefix} --input-files {input.refseq}" \
             " --taxdump-file {input.taxdump} --threads {threads} 2>&1 | tee {log}"
             
 rule ganon_classify:
