@@ -2,7 +2,7 @@
 
 echo "workdir: '/mnt/files/ganon/marine/'"
 echo ""
-echo "cores: 56"
+echo "threads: 18"
 echo ""
 echo "mem_mb: 512000"
 echo ""
