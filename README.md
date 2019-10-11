@@ -30,12 +30,12 @@ conda config --add channels conda-forge
 #### Downloading CAMI Client
 
 <Warning>
-The following commands will be run on folder "/mnt/files/cami2", but it can be changed accordingly
+The following commands will be run on folder "/mnt/files/ganon", but it can be changed accordingly
 </Warning>
 
 ```
-mkdir /mnt/files/cami2
-cd /mnt/files/cami2
+mkdir /mnt/files/ganon
+cd /mnt/files/ganon
 wget -O camiClient.jar https://data.cami-challenge.org/camiClient.jar
 ```
 
