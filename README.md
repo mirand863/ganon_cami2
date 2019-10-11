@@ -46,3 +46,11 @@ chmod +x download-datasets.sh
 ./download-datasets.sh
 ```
 
+# Marine Dataset
+#### Creating config file
+```
+cd marine
+wget -O create-config.sh https://raw.githubusercontent.com/mirand863/ganon_cami2/master/create-config-marine.sh
+chmod +x create-config.sh
+./create-config.sh > config.yaml
+```
