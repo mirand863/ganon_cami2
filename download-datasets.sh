@@ -5,7 +5,7 @@ java \
 -jar \
 camiClient.jar \
 -d \
-marine.linkfile" \
+"marine.linkfile" \
 marine \
 -p short
 
@@ -13,7 +13,7 @@ java \
 -jar \
 camiClient.jar \
 -d \
-strain-madness.linkfile" \
+"strain-madness.linkfile" \
 strain-madness \
 -p short
 
