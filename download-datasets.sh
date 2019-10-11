@@ -3,18 +3,18 @@
 
 java \
 -jar \
-/mnt/files/cami2/camiClient.jar \
+camiClient.jar \
 -d \
-"/mnt/files/cami2/marine.linkfile" \
-/mnt/files/cami2/marine \
+marine.linkfile" \
+marine \
 -p short
 
 java \
 -jar \
-/mnt/files/cami2/camiClient.jar \
+camiClient.jar \
 -d \
-"/mnt/files/cami2/strain-madness.linkfile" \
-/mnt/files/cami2/strain-madness \
+strain-madness.linkfile" \
+strain-madness \
 -p short
 
 wget \
