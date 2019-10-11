@@ -11,3 +11,5 @@ for i in `seq 0 9`; do
 done
 echo ""
 echo "taxdump: '/mnt/files/cami2/ncbi_taxonomy/taxdump.tar.gz'"
+echo ""
+echo "refseq_folder: '/mnt/files/cami2/refseq'"
