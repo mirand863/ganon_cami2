@@ -28,4 +28,5 @@ https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_2_DATABASES/RefSeq
 mkdir refseq
 cd refseq/
 tar -xvf ../RefSeq_genomic_20190108.tar
+for f in *.gz; do cat "$f" >> zconcat.fna.gz; done
 cd ..
