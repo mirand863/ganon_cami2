@@ -20,3 +20,4 @@ java \
 wget \
 -O ncbi_taxonomy.tar \
 https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_2_DATABASES/ncbi_taxonomy.tar
+tar -xvf ncbi_taxonomy.tar
