@@ -29,9 +29,9 @@ conda config --add channels conda-forge
 
 #### Downloading CAMI Client
 
-<aside class="warning">
-The following commands will be run on directory `/mnt/files/cami2`, but it can be changed accordingly
-</aside>
+<Warning>
+The following commands will be run on folder "/mnt/files/cami2", but it can be changed accordingly
+</Warning>
 
 ```
 mkdir /mnt/files/cami2
