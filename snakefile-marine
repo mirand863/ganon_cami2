@@ -16,7 +16,7 @@ rule ganon_build:
     output: "results/ganon_build/refseq.filter"
     log: "results/ganon_build/refseq.log"
     threads: 56
-    shell: "ganon build --db-prefix {params.prefix} --input-files $(find {input.refseq_folder}*.genomic.fna.gz -type f) --taxdump-file {input.taxdump} --threads {thread$
+    shell: "ganon build --db-prefix {params.prefix} --input-files $(find {input.refseq_folder}*.genomic.fna.gz -type f) --taxdump-file {input.taxdump} --threads {threads} 2>&1 | tee {log}"
 
 rule ganon_classify:
     input: fq = "results/preprocessing/{sample}.fq.gz",
