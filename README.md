@@ -16,4 +16,17 @@ conda config --add channels bioconda
 conda config --add channels conda-forge
 ```
 #### Installing ganon
-`conda install ganon`
+`conda install ganon=0.1.4`
+#### Installing Snakemake
+`conda install -c bioconda snakemake=5.7.0`
+#### Installing Oracle Java
+`conda install -c gtcg oraclejdk`
+#### Downloading CAMI Client
+```
+mkdir /mnt/files/cami2
+cd /mnt/files/cami2
+wget -O camiClient.jar https://data.cami-challenge.org/camiClient.jar
+```
+
+# Marine Dataset
+#### 
