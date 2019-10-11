@@ -16,7 +16,8 @@ rule ganon_build:
     output: "results/ganon_build/refseq.filter"
     log: "results/ganon_build/refseq.log"
     threads: 56
-    shell: "ganon build --db-prefix {params.prefix} --input-files $(find {input.refseq_folder}*.genomic.fna.gz -type f) --taxdump-file {input.taxdump} --threads {threads} 2>&1 | tee {log}"
+    shell: "ganon build --db-prefix {params.prefix} --input-files $(find {input.refseq_folder}*.genomic.fna.gz -type f)" \
+            " --taxdump-file {input.taxdump} --threads {threads} 2>&1 | tee {log}"
 
 rule ganon_classify:
     input: fq = "results/preprocessing/{sample}.fq.gz",
@@ -34,4 +35,6 @@ rule postprocessing:
     params: sample_name = config["sample_name"],
             sample_number = "{sample}"
     output: tsv = "results/postprocessing/{sample}.tsv"
-    shell: """sed p {input.lca} | awk '/[/]1/&&v++%2{{sub(/[/]1/, "/2")}}{{print}}' | sort | awk 'BEGIN {{printf "@Version:0.9.1\\n@SampleID:{params.sample_name}_{params.sample_number}\\n\\n@@SEQUENCEID\\tTAXID\\tBINID\\n"}} {{print $1 "\\t" $2 "\\t" $2}}' > {output.tsv}"""
+    shell: """sed p {input.lca} | awk '/[/]1/&&v++%2{{sub(/[/]1/, "/2")}}{{print}}' | sort | """ \
+           """awk 'BEGIN {{printf "@Version:0.9.1\\n@SampleID:{params.sample_name}_{params.sample_number}\\n\\n@@SEQUENCEID\\""" \
+           """tTAXID\\tBINID\\n"}} {{print $1 "\\t" $2 "\\t" $2}}' > {output.tsv}"""
