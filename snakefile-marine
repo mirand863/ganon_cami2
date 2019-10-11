@@ -7,7 +7,7 @@ rule all:
 rule preprocessing:
     input: fq = lambda wildcards: os.path.abspath(config["samples"][wildcards.sample])
     output: fq = "results/preprocessing/{sample}.fq.gz"
-    shell: """zcat {input.fq} | sed '2~4s/[^ACGTN]/N/g' | paste - - - - - - - - | cut -f 1-4 | tr "\t" "\n" | pigz > {output.fq}"""
+    shell: """zcat {input.fq} | sed '2~4s/[^ACGTN]/N/g' | paste - - - - - - - - | cut -f 1-4 | tr "\\t" "\\n" | pigz > {output.fq}"""
 
 rule ganon_build:
     input: taxdump = config["taxdump"],
