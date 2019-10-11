@@ -26,7 +26,7 @@ rule ganon_classify:
             db_prefix = "results/ganon_build/refseq"
     output: lca = "results/ganon_classify/{sample}_classified.lca"
     resources: mem_mb = config["mem_mb"]
-    threads: round(config["cores"] / (config["cores"] / 6))
+    threads: int(round(config["cores"] / (config["cores"] / 6)))
     log: "results/ganon_classify/{sample}_classified.log"
     shell: "ganon classify --output-file-prefix {params.prefix} --threads {threads} --db-prefix {params.db_prefix} --reads {input.fq} 2>&1 | tee {log}"
 
