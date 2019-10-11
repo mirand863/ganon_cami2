@@ -58,3 +58,9 @@ wget -O create-config.sh https://raw.githubusercontent.com/mirand863/ganon_cami2
 chmod +x create-config.sh
 ./create-config.sh > config.yaml
 ```
+
+#### Downloading and running workflow with snakemake
+```
+wget -O Snakefile https://raw.githubusercontent.com/mirand863/ganon_cami2/master/snakefile-marine
+
+```
