@@ -2,9 +2,9 @@
 
 echo "workdir: '/mnt/files/ganon/marine/'"
 echo ""
-echo "threads: 18"
+echo "threads: 56"
 echo ""
-echo "mem_mb: 512000"
+echo "mem_mb: 1677721"
 echo ""
 echo "taxdump: '/mnt/files/ganon/ncbi_taxonomy/taxdump.tar.gz'"
 echo ""
