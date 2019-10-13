@@ -61,6 +61,21 @@ chmod +x create-config.sh
 
 #### Downloading and running workflow with snakemake
 ```
-wget -O Snakefile https://raw.githubusercontent.com/mirand863/ganon_cami2/master/snakefile-marine
+wget -O Snakefile https://raw.githubusercontent.com/mirand863/ganon_cami2/master/Snakefile
 snakemake -s Snakefile --configfile config.yaml -kpr --cores 56 > marine.log
+```
+
+# Strain Madness Dataset
+#### Creating config file
+```
+cd strain-madness
+wget -O create-config.sh https://raw.githubusercontent.com/mirand863/ganon_cami2/master/create-config-strain-madness.sh
+chmod +x create-config.sh
+./create-config.sh > config.yaml
+```
+
+#### Downloading and running workflow with snakemake
+```
+wget -O Snakefile https://raw.githubusercontent.com/mirand863/ganon_cami2/master/Snakefile
+snakemake -s Snakefile --configfile config.yaml -kpr --cores 56 > strain-madness.log
 ```
