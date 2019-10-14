@@ -21,6 +21,11 @@ wget \
 -O ncbi_taxonomy.tar \
 https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_2_DATABASES/ncbi_taxonomy.tar
 tar -xvf ncbi_taxonomy.tar
+cd ncbi_taxonomy
+wget -O ncbi_taxonomy_accession2taxid.tar \
+https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_2_DATABASES/ncbi_taxonomy_accession2taxid.tar
+tar -xvf ncbi_taxonomy_accession2taxid.tar
+cd ..
 
 wget \
 -O RefSeq_genomic_20190108.tar \
