@@ -25,6 +25,8 @@ cd ncbi_taxonomy
 wget -O ncbi_taxonomy_accession2taxid.tar \
 https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_2_DATABASES/ncbi_taxonomy_accession2taxid.tar
 tar -xvf ncbi_taxonomy_accession2taxid.tar
+mv ncbi_taxonomy_accession2taxid/* accession2taxid/
+rmdir ncbi_taxonomy_accession2taxid/
 cd ..
 
 wget \
