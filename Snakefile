@@ -17,7 +17,7 @@ rule ganon_build:
     log: "results/ganon_build/refseq.log"
     threads: config["threads"]
     shell: "ganon build --db-prefix {params.prefix} --input-files {input.refseq}" \
-            " --rank taxid --max-bloom-size 524288 --seq-info nucl_gb nucl_wgs dead_nucl dead_wgs" \
+            " --rank taxid --max-bloom-size 512000 --seq-info nucl_gb nucl_wgs dead_nucl dead_wgs" \
             " --taxdump-file {input.taxdump} --threads {threads} 2>&1 | tee {log}"
             
 rule ganon_classify:
