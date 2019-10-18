@@ -76,6 +76,6 @@ chmod +x create-config.sh
 
 #### Downloading and running workflow with snakemake
 ```
-wget -O Snakefile https://raw.githubusercontent.com/mirand863/ganon_cami2/master/Snakefile
+wget -O Snakefile https://raw.githubusercontent.com/mirand863/ganon_cami2/master/Snakefile-Strain-Madness
 snakemake -s Snakefile --configfile config.yaml -kpr --cores 56 > strain-madness.log
 ```
